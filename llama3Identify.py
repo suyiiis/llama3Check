@@ -7,7 +7,7 @@ import json
 from datasets import load_dataset, Dataset
 import tqdm
 
-model_path = "Meta-Llama-3-8B-Instruct"
+model_path = "meta-llama/Meta-Llama-3-8B-Instruct"
 save_path = "identify_result.json"
 file_path = '../whoishp/llama2GeneratedText_hp.json'
 batch_size = 128
