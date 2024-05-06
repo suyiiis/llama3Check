@@ -6,7 +6,9 @@ import json
 import json
 from datasets import load_dataset, Dataset
 import tqdm
+from huggingface_hub import login
 
+login("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")
 model_path = "meta-llama/Meta-Llama-3-8B-Instruct"
 save_path = "identify_result.json"
 file_path = '../whoishp/llama2GeneratedText_hp.json'
