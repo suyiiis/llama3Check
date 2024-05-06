@@ -12,7 +12,7 @@ login("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")
 model_path = "meta-llama/Meta-Llama-3-8B-Instruct"
 save_path = "identify_result.json"
 file_path = '../whoishp/llama2GeneratedText_hp.json'
-batch_size = 128
+batch_size = 256
 torch.cuda.empty_cache()
 generator = pipeline("text-generation",
                      model=model_path,
@@ -68,7 +68,7 @@ def run():
             tmp = res[0]['generated_text'][len(prompt_list[cnt]):]
             to_save = {
                 'No.': cnt,
-                'generated': tmp,
+                'R': tmp,
             }
             json.dump(to_save, all_testfile)
             all_testfile.write("\n")
